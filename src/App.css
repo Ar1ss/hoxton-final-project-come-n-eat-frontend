@@ -1,0 +1,591 @@
+/* import font */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+@font-face {
+  font-family: "Satisfy-Regular";
+  src: url("./fonts/Satisfy-Regular.ttf");
+}
+
+.App {
+  display: grid;
+  text-align: center;
+  height: 100vh;
+}
+.home{
+  display: grid;
+  place-content: center;
+}
+
+.restaurants{
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  margin-left: 5rem;
+}
+.restaurant_image{
+  background: rgba(0, 0, 0, 0.753);
+  display: grid;
+  place-content: center;
+  border-radius: 40px;
+  align-items: center;
+  
+}
+.restaurant_name{
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.restaurant_inimage{
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.restaurant_logo{
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+.line{
+  width: 1px;
+  height: 100px;
+  background: white;
+}
+.restaurant-list{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+  list-style: none;
+}
+.rightArrow {
+  position: absolute;
+  top: 43%;
+  right: -3px;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.leftArrow {
+  position: absolute;
+  top: 43%;
+  left: 5rem;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+a {
+  text-decoration: none;
+  color : black;
+}
+.signupForm{
+  display: grid;
+  place-content: center;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+.signupForm input{
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+.signupForm button{
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.formSignup{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.signup{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  height: 100vh;
+}
+.header{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  font-family: "Satisfy-Regular";
+  color: white;
+}
+.headerLeft{
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  align-items: center;
+  gap: 1rem; 
+}
+.restaurant_img_sections{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.single_restaurant{
+  background-image: url("https://img.freepik.com/free-photo/wooden-plank-textured-background-material_53876-31378.jpg?w=2000"); ;
+  background-size: 100% 100%;
+  background-blend-mode:darken;
+  background-color: rgba(0, 0, 0, 0.397);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  align-content: center;
+  padding: 3rem;;
+}
+
+.restaurant_info{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  height: 12rem;
+  width: 40rem;
+}
+.restaurant{
+  display: grid;
+  gap: 1rem;
+}
+
+.restaurant__info {
+  display: grid;
+  gap: 1rem;
+}
+.restaurant_info_address{
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  place-items: center;
+  gap: 0.2rem;
+}
+.food{
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 20px;
+  /* make scroll */
+  overflow-y: scroll;
+  
+  width: 40rem;
+  height: 35rem;
+/* hide scroll */
+  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.food_section{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+ grid-template-columns: auto 1fr;
+ border-bottom: solid 1px rgba(0, 0, 0, 0.616);
+ padding: 1rem;
+}
+.food__info{
+  display: grid;
+  gap: 1rem;
+}
+.food__info_price{
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: end;
+  gap: 0.2rem;
+}
+.food__info_name{
+  justify-self: start;
+}
+.food_name-description{
+  display: grid;
+  place-content: start;
+}
+.food_image{
+  border-radius: 10px;
+  height: 100%;
+}
+.food__info_description{
+  place-content: start;
+  text-align: start;
+}
+.product_search{
+  display: grid;
+  place-content: center;
+  border: none;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.912);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 37rem;
+  color: black;
+  font-size: 1rem;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+  text-align: center;
+}
+.product_search:focus{
+  outline: none;
+}
+.product_search_button{
+  background-color: rgba(255, 255, 255, 0.912);
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: grid;
+  place-items: center;
+  padding-left: 1rem;
+}
+.product_search_form{
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+}
+.restaurant__logo{
+  border-radius: 50%;
+  height: 100%;
+}
+.food_buy_button{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  grid-auto-flow: column;
+  justify-self: start;
+}
+.food_buy_button button{
+  width: 2rem;
+  height: 2rem;
+  font-size:1rem; 
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #4b4b4b;
+  color: white;
+  cursor: pointer;
+}
+.restaurant_image{
+  height: 5rem;
+}
+.nav-links{
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  gap: 5rem;
+  padding: 1rem;
+  list-style: none;
+  color: white;
+  width: 40rem;
+  background-color: rgba(0, 0, 0, 0.733);
+  font-family: sans-serif;
+  border-radius: 20px;
+  margin-left: 11rem;
+  margin-top: 5rem;
+}
+.nav-links a{
+  text-decoration: none;
+  color: white;
+}
+.home{
+  background-image: url("./assets/background.jpg"); 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: grid;
+  padding: 3rem;
+  place-content: space-between;
+  
+}
+.home-text{
+  display: grid;
+  place-content: start;
+  text-align: start;
+  place-items: stert;
+
+}
+p {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  padding: 2rem;
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding: 5px;
+}
+.home-text h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+.home-text h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  font-family: sans-serif;   
+}
+.home-text h2{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  font-family: sans-serif;  
+  font-style: italic;
+}
+.home-top-section{
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  place-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 3rem;
+  font-family: sans-serif;
+  margin: 0;
+}
+.p1{
+  font-size: 7rem;
+  color:rgb(255, 255, 255);
+  margin: 0;
+  font-weight: bolder;
+}
+.p2{
+  font-size: 8rem;
+  color:rgb(255, 255, 255);
+  margin: 0;
+  font-weight: bolder;
+}
+.p3{
+  font-size: 2.5rem;
+  color:rgb(255, 255, 255);
+  margin: 0;
+  font-weight: bolder;
+}
+.restaurants-header{
+  background-image: url("https://tasteandflavors.com/wp-content/uploads/2018/11/taste-and-flavors-out-and-about-10-best-burgers-wide.jpg") ;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.432);
+  background-size:cover;
+  background-position: center;
+  height: 15rem ;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  display: grid;
+  place-content: center;
+  /* make header sticky */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: solid 3px rgb(0, 0, 0);
+}
+
+.restaurants-info-opentime{
+  display: grid;
+  grid-auto-flow: column;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  place-content: space-between;
+  color: white;
+}
+
+.buy_button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-self: start;
+  font-size:1rem; 
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  background-color: #4b4b4b;
+  color: white;
+  cursor: pointer;
+}
+
+.buy_button:hover{
+  background-color: #1f1e1e;
+}
+.buy_button:focus{
+  outline: none;
+}
+.buy_button:active{
+  background-color: #4b4b4b;
+}
+
+.profile{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+.profile_img{
+  border-radius: 50%;
+  height: 100px;
+  margin-bottom: 2rem;
+}
+.profile__details{
+  display: grid;
+  align-items: flex-start;
+  text-align: start;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 40rem;
+  /* shadow */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logout_button{
+  padding : 1rem;
+  justify-self: start;
+  font-size:1rem; 
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  background-color: #db6060;
+  color: white;
+  cursor: pointer;
+}
+.profile__owned{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.profile__owned__foods{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.profile__owned__food{
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  place-content: space-between;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 40rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.owned_food_img{
+  border-radius: 10px;
+}
+
+.restaurants_section{
+  background-image: url("https://img.freepik.com/free-photo/wooden-plank-textured-background-material_53876-31378.jpg?w=2000");
+  background-size: cover;
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode:darken;
+  background-color: rgba(0, 0, 0, 0.397);
+}
+.signup{
+  background-image: url("https://img.freepik.com/free-photo/wooden-plank-textured-background-material_53876-31378.jpg?w=2000");
+}
+.signupForm{
+  color: white;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.596);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 40rem;
+  /* shadow */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signup_form{
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.signup_form input{
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.signup_button{
+  padding : 0.7rem;
+  font-size:1rem; 
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  background-color: #db6060;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+.formSignup input{
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.navigation{
+  padding: 1rem;
+  margin-right:11rem;
+}
+.profile__info{
+  margin-left: 12rem;
+}
+.profile_img{
+  margin-right: 12rem;
+}
